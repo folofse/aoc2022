@@ -1,4 +1,4 @@
-pub fn task1(lines:Vec<String>)->i32 {
+pub fn part1(lines:Vec<String>)->i32 {
   let mut most_cal:i32 = 0;
   let mut current_cal:i32 = 0;
 
@@ -17,7 +17,7 @@ pub fn task1(lines:Vec<String>)->i32 {
   return most_cal
 }
 
-pub fn task2(lines:Vec<String>)->i32 {
+pub fn part2(lines:Vec<String>)->i32 {
   let mut all_cal:Vec<i32> = Vec::new();
   let mut current_cal:i32 = 0;
 
@@ -41,47 +41,47 @@ pub fn task2(lines:Vec<String>)->i32 {
 
 #[cfg(test)]
 mod tests {
-  use crate::task1;
-  use crate::task2;
+  use crate::part1;
+  use crate::part2;
   use shared::read_lines;
 
   #[test]
-  fn task1_test1() {
+  fn test1_part1() {
     let lines = read_lines("./src/example.txt")
       .iter()
       .map(|f| f.parse().unwrap())
       .collect();
 
-    assert_eq!(task1(lines), 24000);
+    assert_eq!(part1(lines), 24000);
   }
 
   #[test]
-  fn task1_test2() {
+  fn test2_part1() {
     let lines = read_lines("./src/input.txt")
       .iter()
       .map(|f| f.parse().unwrap())
       .collect();
 
-    assert_eq!(task1(lines), 74394);
+    assert_eq!(part1(lines), 74394);
   }
 
   #[test]
-  fn task2_test1() {
+  fn test1_part2() {
     let lines = read_lines("./src/example.txt")
       .iter()
       .map(|f| f.parse().unwrap())
       .collect();
 
-    assert_eq!(task2(lines), 45000);
+    assert_eq!(part2(lines), 45000);
   }
   
   #[test]
-  fn task2_test2() {
+  fn test2_part2() {
     let lines = read_lines("./src/input.txt")
       .iter()
       .map(|f| f.parse().unwrap())
       .collect();
 
-    assert_eq!(task2(lines), 212836);
+    assert_eq!(part2(lines), 212836);
   }
 }

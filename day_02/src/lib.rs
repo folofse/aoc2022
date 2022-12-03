@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn task1(lines:Vec<String>)->i32 {
+pub fn part1(lines:Vec<String>)->i32 {
   let mut current_score:i32 = 0;
   let scores = HashMap::from([
     ("A", 1), // Rock
@@ -28,7 +28,7 @@ pub fn task1(lines:Vec<String>)->i32 {
   return current_score;
 }
 
-pub fn task2(lines:Vec<String>)->i32 {
+pub fn part2(lines:Vec<String>)->i32 {
   let mut current_score:i32 = 0;
   let scores = HashMap::from([
     ("A", 1), // Rock
@@ -83,47 +83,47 @@ fn get_value(val:&str, winner:bool)->&str {
 
 #[cfg(test)]
 mod tests {
-  use crate::task1;
-  use crate::task2;
+  use crate::part1;
+  use crate::part2;
   use shared::read_lines;
 
   #[test]
-  fn task1_test1() {
+  fn test1_part1() {
     let lines = read_lines("./src/example.txt")
       .iter()
       .map(|f| f.parse().unwrap())
       .collect();
 
-    assert_eq!(task1(lines), 15);
+    assert_eq!(part1(lines), 15);
   }
 
   #[test]
-  fn task1_test2() {
+  fn test2_part1() {
     let lines = read_lines("./src/input.txt")
       .iter()
       .map(|f| f.parse().unwrap())
       .collect();
 
-    assert_eq!(task1(lines), 10718);
+    assert_eq!(part1(lines), 10718);
   }
 
   #[test]
-  fn task2_test1() {
+  fn test1_part2() {
     let lines = read_lines("./src/example.txt")
       .iter()
       .map(|f| f.parse().unwrap())
       .collect();
 
-    assert_eq!(task2(lines), 12);
+    assert_eq!(part2(lines), 12);
   }
 
   #[test]
-  fn task2_test2() {
+  fn test2_part2() {
     let lines = read_lines("./src/input.txt")
       .iter()
       .map(|f| f.parse().unwrap())
       .collect();
 
-    assert_eq!(task2(lines), 14652);
+    assert_eq!(part2(lines), 14652);
   }
 }

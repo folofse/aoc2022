@@ -20,7 +20,7 @@ pub fn part2(lines:Vec<String>)->i32 {
   let mut result:i32 = 0;
   let mut row:usize = 0;
   
-  for line in &lines{
+  for _line in &lines{
     row += 1;
     if row % 3 == 0 {
       let group1 = &lines[row-3];

@@ -88,7 +88,7 @@ fn get_piles_and_movements(lines:Vec<String>) -> PilesAndMovements {
 }
 
 fn get_result(piles:Vec<Vec<String>>) -> String {
-  let mut result  = "".to_owned();;
+  let mut result = "".to_owned();
   for p in piles{
     result.push_str(&p[0]);
   }
